@@ -3,116 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación - La Rosa Náutica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <title>Invitación Especial - La Rosa Náutica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            /* Colores extraídos del sitio oficial */
-            --fondo-crema: #fdfcf9; 
-            --azul-nautico: #1a2a3a;
-            --dorado-suave: #bfa37e;
-            --texto-suave: #5a5a5a;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body, html {
+            height: 100%;
+            font-family: 'Raleway', sans-serif;
+            color: white;
         }
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--fondo-crema); /* El color de fondo de la web */
+        /* Contenedor del fondo con la imagen tipo La Rosa Náutica */
+        .hero-background {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            font-family: 'Raleway', sans-serif;
-        }
-
-        /* Contenedor con efecto de papel elegante */
-        .invitacion {
-            background-color: white;
-            width: 85%;
-            max-width: 500px;
-            padding: 50px 30px;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
-            position: relative;
+            padding: 20px;
         }
 
-        /* El logo estilo La Rosa Náutica */
-        .logo-texto {
+        .header-logo {
             font-family: 'Playfair Display', serif;
-            color: var(--azul-nautico);
-            font-size: 2.2rem;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
+            letter-spacing: 5px;
+            font-size: 1.2rem;
+            position: absolute;
+            top: 40px;
             text-transform: uppercase;
         }
 
-        .sub-logo {
-            font-size: 0.8rem;
-            letter-spacing: 4px;
-            color: var(--dorado-suave);
-            margin-bottom: 30px;
+        .content {
+            max-width: 800px;
         }
 
-        .divisor {
-            width: 40px;
-            height: 1px;
-            background-color: var(--dorado-suave);
-            margin: 20px auto;
-        }
-
-        .mensaje {
-            font-style: italic;
+        .quote {
             font-family: 'Playfair Display', serif;
-            color: var(--texto-suave);
+            font-style: italic;
             font-size: 1.2rem;
-            margin: 30px 0;
+            margin-bottom: 20px;
+            opacity: 0.9;
         }
 
-        .datos {
-            color: var(--azul-nautico);
-            line-height: 1.8;
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
             font-weight: 400;
         }
 
-        .boton-reserva {
-            margin-top: 40px;
-            display: inline-block;
-            padding: 15px 35px;
-            border: 1px solid var(--azul-nautico);
-            color: var(--azul-nautico);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            transition: all 0.3s;
+        .descripcion {
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            font-weight: 300;
         }
 
-        .boton-reserva:hover {
-            background-color: var(--azul-nautico);
+        .detalles-evento {
+            margin-bottom: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* Estilo del botón de WhatsApp */
+        .btn-whatsapp {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid white;
             color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-whatsapp:hover {
+            background: white;
+            color: #333;
+        }
+
+        /* Responsivo para celulares */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .header-logo { top: 20px; font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="invitacion">
-        <div class="logo-texto">La Rosa Náutica</div>
-        <div class="sub-logo">RESTAURANTE</div>
-        
-        <div class="divisor"></div>
-        
-        <p class="mensaje">“Un verdadero placer para los sentidos”</p>
-        
-        <div class="datos">
-            <p>TE ESPERAMOS PARA UNA EXPERIENCIA MÁGICA</p>
-            <p><strong>SÁBADO 19 DE ABRIL</strong></p>
-            <p>A LAS 20:30 HORAS</p>
-            <p>ESPIGÓN 4, MIRAFLORES</p>
-        </div>
+    <div class="hero-background">
+        <div class="header-logo">Rosa Náutica</div>
 
-        <a href="https://larosanautica.com/reservas-restaurante/" class="boton-reserva">Confirmar Asistencia</a>
+        <div class="content">
+            <p class="quote">— "Verdadero placer para los sentidos"</p>
+            <h1>Reserva una experiencia sobre el mar</h1>
+            
+            <p class="descripcion">
+                Te invitamos a disfrutar de una gastronomía marina excepcional en un ambiente único.
+            </p>
+
+            <div class="detalles-evento">
+                <p>SÁBADO 19 DE ABRIL | 20:30 HRS</p>
+                <p>ESPIGÓN 4, MIRAFLORES</p>
+            </div>
+
+            <a href="https://wa.me/TU_NUMERO_AQUI?text=Acepto%20la%20invitación" class="btn-whatsapp">
+                Confirmar Asistencia
+            </a>
+        </div>
     </div>
 
 </body>
