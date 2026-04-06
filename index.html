@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación - La Rosa Náutica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    <title>Invitación Cumpleaños - La Rosa Náutica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -14,9 +14,9 @@
             font-family: 'Raleway', sans-serif;
         }
 
+        /* Contenedor del fondo con la imagen del océano */
         .hero-background {
-            /* Imagen de fondo inspirada en el litoral de Miraflores */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
                               url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
@@ -27,28 +27,40 @@
             padding: 20px;
         }
 
-        /* EL CUADRO DE LA INVITACIÓN */
+        /* Cuadro de la invitación con transparencia */
         .tarjeta-invitacion {
-            background: rgba(255, 255, 255, 0.6); /* Blanco semi-transparente */
-            backdrop-filter: blur(12px); /* Efecto de vidrio borroso */
-            padding: 60px 40px;
-            max-width: 550px;
+            background: rgba(255, 255, 255, 0.6); /* Transparencia equilibrada */
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px); /* Para Safari */
+            padding: 40px 30px;
+            max-width: 480px;
             width: 100%;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            color: #1a2a3a; /* Texto oscuro para que resalte en el cuadro blanco */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            color: #1a2a3a; /* Azul náutico oscuro */
         }
 
+        /* Título de La Rosa Náutica */
         .header-logo {
             font-family: 'Playfair Display', serif;
-            letter-spacing: 8px;
+            letter-spacing: 12px;
             font-size: 2rem;
             text-transform: uppercase;
-            margin-bottom: 30px;
-            color: #001a33; /* Dorado suave */
+            color: #001a33;
             font-weight: 900;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+            margin-bottom: 5px;
+        }
+
+        /* ESTILO CORREGIDO DEL LOGO (SIN FONDO BLANCO Y PEQUEÑO) */
+        .logo-imagen {
+            width: 45px;                 /* Más pequeño y elegante */
+            height: auto;
+            margin: 0 auto 15px;
+            display: block;
+            mix-blend-mode: multiply;    /* Elimina el fondo blanco */
+            filter: contrast(1.1);       /* Asegura que el negro sea negro */
         }
 
         .quote {
@@ -56,65 +68,79 @@
             font-style: italic;
             font-size: 1.1rem;
             margin-bottom: 20px;
-            color: #5a5a5a;
+            color: #444;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
-            line-height: 1.2;
-            margin-bottom: 25px;
+            line-height: 1.1;
+            margin-bottom: 20px;
             font-weight: 700;
             text-transform: uppercase;
             color: #1a2a3a;
         }
 
         .divisor {
-            width: 50px;
+            width: 40px;
             height: 1px;
-            background-color: #bfa37e;
-            margin: 0 auto 30px;
+            background-color: #bfa37e; /* Dorado suave */
+            margin: 0 auto 25px;
         }
 
         .detalles-evento {
-            margin-bottom: 40px;
-            font-size: 0.95rem;
-            line-height: 1.8;
-            letter-spacing: 1px;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #1a2a3a;
         }
 
-        /* Botón de WhatsApp estilizado */
+        .detalles-evento Strong {
+            font-weight: 600;
+        }
+
+        .dress-code {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* UBICACIÓN MÁS PEQUEÑA (CORRECCIÓN SOLICITADA) */
+        .ubicacion {
+            font-size: 0.85rem;          /* Mucho más pequeño */
+            letter-spacing: 1px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            color: #555;                 /* Color más sutil */
+        }
+
+        /* Botón Confirmar Asistencia */
         .btn-whatsapp {
             display: inline-block;
-            padding: 18px 45px;
-            background-color: #1a2a3a; /* Azul Náutico */
+            margin-top: 20px;
+            padding: 15px 40px;
+            background-color: #1a2a3a;
             color: white;
             text-decoration: none;
             text-transform: uppercase;
             font-size: 0.8rem;
             letter-spacing: 2px;
-            transition: all 0.3s ease;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
         }
 
         .btn-whatsapp:hover {
-            background-color: #bfa37e; /* Cambia a dorado al pasar el mouse */
+            background-color: #bfa37e; /* Cambia a dorado suave */
             transform: translateY(-2px);
         }
 
-        /* Ajustes para celulares */
+        /* Adaptación para dispositivos móviles */
         @media (max-width: 600px) {
-            .tarjeta-invitacion { padding: 40px 20px; }
             h1 { font-size: 1.8rem; }
+            .header-logo { font-size: 1.5rem; letter-spacing: 6px; }
+            .tarjeta-invitacion { padding: 40px 20px; }
         }
-        /* Esto controla el tamaño y la transparencia del logo */
-.logo-imagen {
-    width: 50px;                 /* Tamaño pequeño y elegante */
-    height: auto;                /* Mantiene la proporción */
-    margin: 0 auto 15px;         /* Centra el logo y da espacio abajo */
-    display: block;              /* Permite centrarlo con margin auto */
-    mix-blend-mode: multiply;    /* ESTO QUITA EL FONDO BLANCO */
-    filter: contrast(1.2);       /* Hace que las líneas negras resalten más */
-}
     </style>
 </head>
 <body>
@@ -122,7 +148,9 @@
     <div class="hero-background">
         <div class="tarjeta-invitacion">
             <div class="header-logo">La Rosa Náutica</div>
-<img src="logo.png" alt="Logo" class="logo-imagen">               
+            
+            <img src="logo.png" alt="Logo" class="logo-imagen">
+
             <p class="quote">“Un verdadero placer para los sentidos”</p>
             <h1>Un cumpleaños diferente</h1>
             
@@ -132,11 +160,11 @@
                 <p>IREMOS ESTE</p>
                 <p><strong>SÁBADO 11 DE ABRIL</strong></p>
                 <p>A LAS 17:30 HORAS</p>
-                <P>Dress Code: Sport elegante</P>
-                <p>ESPIGÓN 4 DE MIRAFLORES, LIMA</p>
+                <p class="dress-code">Dress Code: Sport elegante</p>
+                <p class="ubicacion">Espigón 4 de Miraflores, Lima</p>
             </div>
 
-            <a href="https://wa.me/51941761696?text=Acepto%20con%20gusto%20la%20invitación%20mi%20amor" class="btn-whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=TU_NUMERO_AQUI&text=Hola!%20Acepto%20la%20invitacion" class="btn-whatsapp">
                 Confirmar Asistencia
             </a>
         </div>
