@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación Especial - La Rosa Náutica</title>
+    <title>Invitación - La Rosa Náutica</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
     
     <style>
@@ -12,113 +12,119 @@
         body, html {
             height: 100%;
             font-family: 'Raleway', sans-serif;
-            color: white;
         }
 
-        /* Contenedor del fondo con la imagen tipo La Rosa Náutica */
         .hero-background {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80');
+            /* Imagen de fondo inspirada en el litoral de Miraflores */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                              url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
             padding: 20px;
+        }
+
+        /* EL CUADRO DE LA INVITACIÓN */
+        .tarjeta-invitacion {
+            background: rgba(255, 255, 255, 0.85); /* Blanco semi-transparente */
+            backdrop-filter: blur(10px); /* Efecto de vidrio borroso */
+            padding: 60px 40px;
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            color: #1a2a3a; /* Texto oscuro para que resalte en el cuadro blanco */
         }
 
         .header-logo {
             font-family: 'Playfair Display', serif;
-            letter-spacing: 5px;
-            font-size: 1.2rem;
-            position: absolute;
-            top: 40px;
+            letter-spacing: 6px;
+            font-size: 1rem;
             text-transform: uppercase;
-        }
-
-        .content {
-            max-width: 800px;
+            margin-bottom: 40px;
+            color: #bfa37e; /* Dorado suave */
         }
 
         .quote {
             font-family: 'Playfair Display', serif;
             font-style: italic;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 20px;
-            opacity: 0.9;
+            color: #5a5a5a;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             line-height: 1.2;
-            margin-bottom: 20px;
-            font-weight: 400;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1a2a3a;
         }
 
-        .descripcion {
-            font-size: 1rem;
-            max-width: 500px;
+        .divisor {
+            width: 50px;
+            height: 1px;
+            background-color: #bfa37e;
             margin: 0 auto 30px;
-            line-height: 1.6;
-            font-weight: 300;
         }
 
         .detalles-evento {
             margin-bottom: 40px;
-            font-weight: 500;
+            font-size: 0.95rem;
+            line-height: 1.8;
             letter-spacing: 1px;
         }
 
-        /* Estilo del botón de WhatsApp */
+        /* Botón de WhatsApp estilizado */
         .btn-whatsapp {
             display: inline-block;
-            padding: 15px 40px;
-            border: 1px solid white;
+            padding: 18px 45px;
+            background-color: #1a2a3a; /* Azul Náutico */
             color: white;
             text-decoration: none;
             text-transform: uppercase;
             font-size: 0.8rem;
             letter-spacing: 2px;
             transition: all 0.3s ease;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(5px);
         }
 
         .btn-whatsapp:hover {
-            background: white;
-            color: #333;
+            background-color: #bfa37e; /* Cambia a dorado al pasar el mouse */
+            transform: translateY(-2px);
         }
 
-        /* Responsivo para celulares */
+        /* Ajustes para celulares */
         @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
-            .header-logo { top: 20px; font-size: 0.9rem; }
+            .tarjeta-invitacion { padding: 40px 20px; }
+            h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="hero-background">
-        <div class="header-logo">Rosa Náutica</div>
-
-        <div class="content">
-            <p class="quote">— "Verdadero placer para los sentidos"</p>
-            <h1>Reserva una experiencia sobre el mar</h1>
+        <div class="tarjeta-invitacion">
+            <div class="header-logo">La Rosa Náutica</div>
             
-            <p class="descripcion">
-                Te invitamos a disfrutar de una gastronomía marina excepcional en un ambiente único.
-            </p>
+            <p class="quote">“Un verdadero placer para los sentidos”</p>
+            <h1>Una velada inolvidable</h1>
+            
+            <div class="divisor"></div>
 
             <div class="detalles-evento">
-                <p>SÁBADO 19 DE ABRIL | 20:30 HRS</p>
-                <p>ESPIGÓN 4, MIRAFLORES</p>
+                <p>TE ESPERAMOS ESTE</p>
+                <p><strong>SÁBADO 19 DE ABRIL</strong></p>
+                <p>A LAS 20:30 HORAS</p>
+                <p>ESPIGÓN 4 DE MIRAFLORES, LIMA</p>
             </div>
 
-            <a href="https://wa.me/TU_NUMERO_AQUI?text=Acepto%20la%20invitación" class="btn-whatsapp">
+            <a href="https://wa.me/TU_NUMERO_AQUI?text=¡Hola!%20Acepto%20con%20gusto%20la%20invitación" class="btn-whatsapp">
                 Confirmar Asistencia
             </a>
         </div>
