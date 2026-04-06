@@ -3,107 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación Especial - La Rosa Náutica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <title>Invitación - La Rosa Náutica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
-        /* Variables de colores para fácil ajuste */
         :root {
-            --azul-marino: #002344;
-            --dorado: #c5a059;
-            --blanco: #ffffff;
+            /* Colores extraídos del sitio oficial */
+            --fondo-crema: #fdfcf9; 
+            --azul-nautico: #1a2a3a;
+            --dorado-suave: #bfa37e;
+            --texto-suave: #5a5a5a;
         }
 
         body {
             margin: 0;
             padding: 0;
+            background-color: var(--fondo-crema); /* El color de fondo de la web */
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f4f4f4;
             font-family: 'Raleway', sans-serif;
         }
 
-        .invitacion-card {
-            background-color: var(--blanco);
-            width: 90%;
-            max-width: 450px;
-            padding: 40px;
+        /* Contenedor con efecto de papel elegante */
+        .invitacion {
+            background-color: white;
+            width: 85%;
+            max-width: 500px;
+            padding: 50px 30px;
             text-align: center;
-            border: 2px solid var(--dorado);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
             position: relative;
         }
 
-        /* Borde decorativo interno */
-        .invitacion-card::after {
-            content: '';
-            position: absolute;
-            top: 10px; left: 10px; right: 10px; bottom: 10px;
-            border: 1px solid var(--dorado);
-            pointer-events: none;
-        }
-
-        h1 {
+        /* El logo estilo La Rosa Náutica */
+        .logo-texto {
             font-family: 'Playfair Display', serif;
-            color: var(--azul-marino);
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            color: var(--azul-nautico);
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
             text-transform: uppercase;
         }
 
+        .sub-logo {
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            color: var(--dorado-suave);
+            margin-bottom: 30px;
+        }
+
         .divisor {
-            width: 50px;
-            height: 2px;
-            background-color: var(--dorado);
+            width: 40px;
+            height: 1px;
+            background-color: var(--dorado-suave);
             margin: 20px auto;
         }
 
-        .detalle {
-            color: #555;
-            font-size: 1.1rem;
-            line-height: 1.6;
+        .mensaje {
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--texto-suave);
+            font-size: 1.2rem;
+            margin: 30px 0;
         }
 
-        .info-importante {
-            color: var(--azul-marino);
-            font-weight: bold;
-            margin: 20px 0;
+        .datos {
+            color: var(--azul-nautico);
+            line-height: 1.8;
+            font-weight: 400;
         }
 
-        .boton-mapa {
+        .boton-reserva {
+            margin-top: 40px;
             display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
-            background-color: var(--azul-marino);
-            color: var(--blanco);
+            padding: 15px 35px;
+            border: 1px solid var(--azul-nautico);
+            color: var(--azul-nautico);
             text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            transition: all 0.3s;
         }
 
-        .boton-mapa:hover {
-            background-color: var(--dorado);
+        .boton-reserva:hover {
+            background-color: var(--azul-nautico);
+            color: white;
         }
     </style>
 </head>
 <body>
 
-    <div class="invitacion-card">
-        <h1>La Rosa Náutica</h1>
-        <div class="divisor"></div>
-        <p class="detalle">Tenemos el placer de invitarte a una cena exclusiva frente al mar.</p>
+    <div class="invitacion">
+        <div class="logo-texto">La Rosa Náutica</div>
+        <div class="sub-logo">RESTAURANTE</div>
         
-        <div class="info-importante">
-            <p>Sábado, 18 de Abril</p>
-            <p>08:00 PM</p>
-            <p>Espigón 4 de Miraflores, Lima</p>
+        <div class="divisor"></div>
+        
+        <p class="mensaje">“Un verdadero placer para los sentidos”</p>
+        
+        <div class="datos">
+            <p>TE ESPERAMOS PARA UNA EXPERIENCIA MÁGICA</p>
+            <p><strong>SÁBADO 19 DE ABRIL</strong></p>
+            <p>A LAS 20:30 HORAS</p>
+            <p>ESPIGÓN 4, MIRAFLORES</p>
         </div>
 
-        <p class="detalle">Código de vestimenta: Sport elegante</p>
-        
-        <a href="https://maps.google.com" target="_blank" class="boton-mapa">Ver Ubicación</a>
+        <a href="https://larosanautica.com/reservas-restaurante/" class="boton-reserva">Confirmar Asistencia</a>
     </div>
 
 </body>
